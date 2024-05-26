@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <ul>
+    <% books.forEach(book => { %>
+      <li><%= book.title %> by <%= book.author %> - <a href="/edit/<%= book._id %>">Edit</a> | <a href="/delete/<%= book._id %>">Delete</a></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
